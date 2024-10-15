@@ -25,7 +25,8 @@ def recipe_view(request, dish):
 
     servings = int(request.GET.get('servings', 1))
 
-    # Умножаем количество ингредиентов на количество порций
+    # Умножаем количество ингредиентов на количество порций и округлаем до двух знаков после запятой,
+    # т.к. при количестве, например, 82 персоны для омлета значение будет равно 8.200000000000001 :)
     if recipe:
         recipe_for_servings = {ingredient: round(amount * servings, 2) for ingredient, amount in recipe.items()}
     else:
