@@ -27,7 +27,7 @@ Content-Type: application/json
   "description": "Перенес датчик на балкон"
 }
 
-###
+
 
 # добавление измерения
 POST {{baseUrl}}/measurements/
